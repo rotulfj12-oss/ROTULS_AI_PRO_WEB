@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ROTUL'S AI PRO</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="app-bg"></div>
+<aside class="sidebar">
+  <div class="brand"><img src="icon.png"><div><b>ROTUL'S</b><span>AI PRO</span></div></div>
+  <div class="side-line"></div>
+  <div class="section-label">AI ASSISTANT</div>
+  <nav>
+    <button class="nav active" data-page="home"><span class="ico">⌂</span>Beranda</button>
+    <button class="nav" data-page="chat"><span class="ico">✦</span>Tanya AI</button>
+    <button class="nav" data-page="history"><span class="ico">◷</span>Riwayat</button>
+    <button class="nav" data-page="settings"><span class="ico">⚙</span>Pengaturan</button>
+  </nav>
+  <div class="side-bottom"><div class="api-card"><span class="dot"></span><div><b>AI siap digunakan</b><small>OpenRouter</small></div></div><div class="version">ROTUL'S AI PRO · v4.0.0</div></div>
+</aside>
+<main>
+<header class="topbar"><div><div class="eyebrow" id="eyebrow">AI ASSISTANT SERBA BISA</div><h1 id="pageTitle">Halo! 👋</h1><p id="pageSub">Ada yang bisa saya bantu hari ini?</p></div><div class="top-actions"><div class="model-pill" id="modelPill">✦ Google: Gemma 4 26B A4B (free)</div><button class="gear" data-page="settings">⚙</button></div></header>
+
+<section id="home" class="page show">
+  <div class="hero-original">
+    <div class="hero-copy">
+      <div class="free-pill">✦ AI SERBAGUNA <b>GRATIS</b></div>
+      <h2>Semua pertanyaan,<br><em>satu jawaban.</em></h2>
+      <p>Tulis pertanyaan, kirim gambar, atau gunakan kamera. ROTUL'S AI PRO membantu menjawab dan menjelaskan dengan bahasa yang mudah dipahami.</p>
+      <div class="hero-buttons"><button class="primary big" data-page="chat">Mulai Bertanya <span>→</span></button><button class="outline big" id="heroImage">▧ Kirim Gambar</button></div>
+      <div class="tiny-tags"><span>● Text</span><span>● Image</span><span>● Camera</span><span>● Banyak model</span></div>
+    </div>
+    <div class="hero-art"><img src="icon.png"><div class="float-tag tag1">💬 Tanya apa saja</div><div class="float-tag tag2">✦ Jawaban cerdas</div><div class="float-tag tag3">▧ Baca gambar</div></div>
+  </div>
+  <div class="feature-head"><div><div class="section-label">FITUR UTAMA</div><h3>Apa yang bisa dilakukan?</h3></div><button id="allFeatures">Lihat semua fitur AI →</button></div>
+  <div class="feature-grid">
+    <button class="feature" data-page="chat"><span class="feature-icon">✦</span><div><b>Tanya apa saja</b><small>Pelajaran, pengetahuan umum, ide, coding, dan lainnya.</small></div><strong>→</strong></button>
+    <button class="feature" id="imageFeature"><span class="feature-icon">▧</span><div><b>Analisis gambar</b><small>Soal, dokumen, diagram, foto, dan lainnya.</small></div><strong>→</strong></button>
+    <button class="feature" id="cameraFeature"><span class="feature-icon">◉</span><div><b>Gunakan kamera</b><small>Ambil foto langsung dari kamera perangkat.</small></div><strong>→</strong></button>
+    <button class="feature extra" id="voiceFeature"><span class="feature-icon">🎙</span><div><b>Rekam untuk bertanya</b><small>Ubah suara menjadi pertanyaan untuk AI.</small></div><strong>→</strong></button>
+    <button class="feature extra" id="uploadFeature"><span class="feature-icon">↑</span><div><b>Upload file</b><small>PDF, Word, TXT, CSV, dan file lainnya.</small></div><strong>→</strong></button>
+    <button class="feature extra" id="fileFeature"><span class="feature-icon">▤</span><div><b>Buat file</b><small>Word, PDF, Excel, dan PowerPoint.</small></div><strong>→</strong></button>
+    <button class="feature extra" id="makeImageFeature"><span class="feature-icon">✧</span><div><b>Buat gambar</b><small>Siapkan prompt gambar dari Creative Studio.</small></div><strong>→</strong></button>
+    <button class="feature extra" id="makeSongFeature"><span class="feature-icon">♫</span><div><b>Buat lagu</b><small>Siapkan ide lirik, konsep, dan prompt musik.</small></div><strong>→</strong></button>
+    <button class="feature extra" id="pdfFeature"><span class="feature-icon">▥</span><div><b>Dokumen & PDF</b><small>Susun materi lalu ekspor ke file.</small></div><strong>→</strong></button>
+  </div>
+</section>
+
+<section id="chat" class="page">
+  <div class="chat-page-head"><div><div class="section-label">ROTUL'S AI PRO</div><h2>Tanya AI</h2><p>Tulis pertanyaan atau kirim gambar untuk mulai.</p></div><div class="chat-top-right"><div class="model-pill" id="chatModelPill">✦ Google: Gemma 4 26B A4B (free)</div><button class="gear" data-page="settings">⚙</button></div></div>
+  <div class="chat-columns">
+    <div class="question-panel"><div class="panel-top"><div><div class="section-label">PERTANYAAN</div><h3>Apa yang ingin kamu tanyakan?</h3></div><span class="ready">● SIAP</span></div>
+      <textarea id="input" placeholder="Ketik pertanyaanmu di sini...\n\nContoh: Jelaskan fotosintesis dengan bahasa sederhana."></textarea>
+      <div class="input-tools"><button id="attach">▧ Upload gambar</button><button id="cameraBtn">◉ Kamera</button><button id="mic">◉ Rekam</button><select id="model"><option value="google/gemma-4-26b-a4b-it:free">Google: Gemma 4 26B A4B (free)</option></select></div>
+      <div id="filePreview" class="file-preview">Belum ada gambar</div>
+      <button id="send" class="primary ask-btn">✦ Tanya ROTUL'S AI <span>→</span></button>
+    </div>
+    <div class="answer-panel"><div class="panel-top"><div><div class="section-label">JAWABAN AI</div><h3>Hasil & penjelasan</h3></div><span class="online">AI ONLINE</span></div><div id="messages" class="answer-body"><div class="empty-answer"><img src="icon.png"><h4>Belum ada jawaban</h4><p>Kirim pertanyaan untuk memulai percakapan dengan AI.</p></div></div></div>
+  </div>
+</section>
+
+<section id="history" class="page"><div class="simple-page"><div class="section-label">RIWAYAT</div><h2>Riwayat percakapan</h2><p>Pertanyaan dan jawaban yang dibuat selama aplikasi ini berjalan.</p><div id="historyList" class="history-list"><div class="empty-box">Belum ada riwayat.</div></div></div></section>
+<section id="settings" class="page"><div class="simple-page settings-page"><div class="section-label">PENGATURAN</div><h2>Pengaturan ROTUL'S AI PRO</h2><p>Gunakan OpenRouter sebagai penyedia AI. API key disimpan lokal di Mac ini.</p><label>OpenRouter API Key<input id="key" type="password" placeholder="sk-or-…"></label><div class="settings-actions"><button id="saveKey" class="primary">Simpan API Key</button><button id="loadModels" class="outline">Muat model</button></div><div id="settingsStatus"></div><div class="setting-note">Endpoint: https://openrouter.ai/api/v1</div></div></section>
+
+<input id="fileInput" type="file" hidden accept=".pdf,.doc,.docx,.txt,.md,.csv,.json,.png,.jpg,.jpeg,.webp">
+<input id="cameraInput" type="file" hidden accept="image/*" capture="environment">
+<div id="featureModal" class="modal"><div class="modal-card"><button class="close" id="closeModal">×</button><div class="section-label">FITUR LENGKAP</div><h2>Semua fitur ROTUL'S AI PRO</h2><div class="modal-grid"><button data-action="chat">✦ Tanya AI<small>Chat & soal</small></button><button data-action="voice">🎙 Rekam<small>Voice input</small></button><button data-action="camera">◉ Kamera<small>Foto soal</small></button><button data-action="upload">↑ Upload file<small>PDF, DOCX, CSV, TXT</small></button><button data-action="doc">▤ Word / PDF<small>Dokumen</small></button><button data-action="excel">▦ Excel<small>Spreadsheet</small></button><button data-action="ppt">▤ PowerPoint<small>Presentasi</small></button><button data-action="image">✧ Gambar<small>Creative prompt</small></button><button data-action="song">♫ Lagu<small>Creative prompt</small></button></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/docx@9.5.1/build/index.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@3.0.2/dist/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+<script src="web-api.js"></script>
+<script src="renderer.js"></script></body></html>
